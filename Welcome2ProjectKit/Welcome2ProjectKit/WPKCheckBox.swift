@@ -10,10 +10,6 @@ import Cocoa
 
 class WPKCheckBox: NSButton {
 
-    private var trackingArea: NSTrackingArea?
-    private var backgroundColor: NSColor?
-    private var checkMarkColor: NSColor?
-
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         self.wantsLayer = true
@@ -26,31 +22,6 @@ class WPKCheckBox: NSButton {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override func updateTrackingAreas() {
-        super.updateTrackingAreas()
-        if trackingArea != nil {
-            if let trackingArea = trackingArea {
-                removeTrackingArea(trackingArea)
-            }
-        }
-
-        let opts: NSTrackingArea.Options = [.mouseEnteredAndExited, .mouseMoved, .activeAlways]
-        trackingArea = NSTrackingArea(rect: self.bounds, options: opts, owner: self, userInfo: nil)
-        if let trackingArea = trackingArea {
-            addTrackingArea(trackingArea)
-        }
-    }
-
-    override func mouseEntered(with theEvent: NSEvent) {
-        super.mouseEntered(with: theEvent)
-        NSCursor.pointingHand.set()
-    }
-
-    override func mouseExited(with theEvent: NSEvent) {
-        super.mouseExited(with: theEvent)
-        NSCursor.arrow.set()
     }
 
     // swiftlint:disable function_body_length

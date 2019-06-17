@@ -16,6 +16,9 @@
 		98416DE322AE1ED300DEEFC8 /* WPKLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98416DE222AE1ED300DEEFC8 /* WPKLabel.swift */; };
 		98416DE522AE23FD00DEEFC8 /* WPKCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98416DE422AE23FD00DEEFC8 /* WPKCheckBox.swift */; };
 		98416DED22AE7FA700DEEFC8 /* WPKColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98416DEC22AE7FA700DEEFC8 /* WPKColorExtension.swift */; };
+		9865F24C22B6890A00030A7A /* Welcome2Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F24B22B6890A00030A7A /* Welcome2Project.swift */; };
+		9865F25022B72D9100030A7A /* Welcome2ProjectUserChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F24F22B72D9100030A7A /* Welcome2ProjectUserChoice.swift */; };
+		9865F25A22B780D500030A7A /* WPKArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F25922B780D500030A7A /* WPKArrayExtension.swift */; };
 		98AFD15022B15D9500D43BB1 /* WPKTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AFD14F22B15D9500D43BB1 /* WPKTableCellView.swift */; };
 		98BB88BC22B286CD00C41EC2 /* WPKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB88BB22B286CD00C41EC2 /* WPKView.swift */; };
 		98BB88C222B3608800C41EC2 /* WPKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB88C122B3608800C41EC2 /* WPKButton.swift */; };
@@ -35,6 +38,9 @@
 		98416DE222AE1ED300DEEFC8 /* WPKLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPKLabel.swift; sourceTree = "<group>"; };
 		98416DE422AE23FD00DEEFC8 /* WPKCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPKCheckBox.swift; sourceTree = "<group>"; };
 		98416DEC22AE7FA700DEEFC8 /* WPKColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPKColorExtension.swift; sourceTree = "<group>"; };
+		9865F24B22B6890A00030A7A /* Welcome2Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome2Project.swift; sourceTree = "<group>"; };
+		9865F24F22B72D9100030A7A /* Welcome2ProjectUserChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome2ProjectUserChoice.swift; sourceTree = "<group>"; };
+		9865F25922B780D500030A7A /* WPKArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPKArrayExtension.swift; sourceTree = "<group>"; };
 		98AFD14F22B15D9500D43BB1 /* WPKTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPKTableCellView.swift; sourceTree = "<group>"; };
 		98BB88BB22B286CD00C41EC2 /* WPKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPKView.swift; sourceTree = "<group>"; };
 		98BB88C122B3608800C41EC2 /* WPKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPKButton.swift; sourceTree = "<group>"; };
@@ -81,8 +87,10 @@
 		98416DC122AD651000DEEFC8 /* Welcome2ProjectKit */ = {
 			isa = PBXGroup;
 			children = (
+				9865F25B22B7823300030A7A /* Extensions */,
 				98416DE122AE1EB500DEEFC8 /* UI */,
-				98416DDC22AD683B00DEEFC8 /* Welcome2ProjectWindowController.swift */,
+				9865F24F22B72D9100030A7A /* Welcome2ProjectUserChoice.swift */,
+				9865F24B22B6890A00030A7A /* Welcome2Project.swift */,
 				98416DC222AD651000DEEFC8 /* Welcome2ProjectKit.h */,
 				98416DC322AD651000DEEFC8 /* Info.plist */,
 			);
@@ -113,12 +121,21 @@
 			children = (
 				98416DE222AE1ED300DEEFC8 /* WPKLabel.swift */,
 				98416DE422AE23FD00DEEFC8 /* WPKCheckBox.swift */,
-				98416DEC22AE7FA700DEEFC8 /* WPKColorExtension.swift */,
 				98AFD14F22B15D9500D43BB1 /* WPKTableCellView.swift */,
 				98BB88BB22B286CD00C41EC2 /* WPKView.swift */,
 				98BB88C122B3608800C41EC2 /* WPKButton.swift */,
+				98416DDC22AD683B00DEEFC8 /* Welcome2ProjectWindowController.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		9865F25B22B7823300030A7A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98416DEC22AE7FA700DEEFC8 /* WPKColorExtension.swift */,
+				9865F25922B780D500030A7A /* WPKArrayExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,10 +271,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				98416DED22AE7FA700DEEFC8 /* WPKColorExtension.swift in Sources */,
+				9865F25022B72D9100030A7A /* Welcome2ProjectUserChoice.swift in Sources */,
 				98AFD15022B15D9500D43BB1 /* WPKTableCellView.swift in Sources */,
 				98416DDD22AD683B00DEEFC8 /* Welcome2ProjectWindowController.swift in Sources */,
+				9865F25A22B780D500030A7A /* WPKArrayExtension.swift in Sources */,
 				98BB88C222B3608800C41EC2 /* WPKButton.swift in Sources */,
 				98416DE322AE1ED300DEEFC8 /* WPKLabel.swift in Sources */,
+				9865F24C22B6890A00030A7A /* Welcome2Project.swift in Sources */,
 				98416DE522AE23FD00DEEFC8 /* WPKCheckBox.swift in Sources */,
 				98BB88BC22B286CD00C41EC2 /* WPKView.swift in Sources */,
 			);
