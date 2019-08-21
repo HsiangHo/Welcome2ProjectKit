@@ -94,7 +94,6 @@ extension Welcome2ProjectWindowController {
 
         if let wnd = self.window {
             wnd.titlebarAppearsTransparent = true
-            wnd.backgroundColor = NSColor.white
             wnd.isMovableByWindowBackground = true
 
             let leftview = WPKView.init(frame: NSRect(x: 0, y: 0, width: 495, height: 472))
