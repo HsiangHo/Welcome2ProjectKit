@@ -8,6 +8,10 @@
 
 import Cocoa
 
+extension Notification.Name {
+    static let AppleInterfaceThemeChangedNotification = Notification.Name("AppleInterfaceThemeChangedNotification")
+}
+
 class Welcome2ProjectWindowController: NSWindowController {
     private var _btnClose: NSButton?
     private var _ivLogo: NSImageView?
@@ -233,7 +237,23 @@ extension Welcome2ProjectWindowController {
             tableView.selectionHighlightStyle = .sourceList
             tableView.floatsGroupRows = false
         }
+
+        _interfaceModeChanged()
+
+        DistributedNotificationCenter.default().addObserver(self,
+                                                            selector: #selector(_interfaceModeChanged),
+                                                            name: .AppleInterfaceThemeChangedNotification,
+                                                            object: nil)
     }
+
+    @objc private func _interfaceModeChanged() {
+        if NSAppearance.isDarkMode {
+            self.window?.backgroundColor = NSColor.windowBackgroundColor
+        } else {
+            self.window?.backgroundColor = .white
+        }
+    }
+
 }
 
 // MARK: Delegate and Data Source
