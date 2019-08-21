@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             // swiftlint:disable line_length
             let userChoiceObj1 = W2PUserChoiceObject.init(img: NSImage.init(named: "NewCheckoutTemplate")!,
                                                           title: "Clone an existing project",
-                                                          subtitle: "Start working on something on Gir repository.") { (choiceObj) in
+                                                          subtitle: "Start working on something on Git repository.") { (choiceObj) in
                                                             if let obj = choiceObj as? W2PUserChoiceObject {
                                                                 print("title:" + obj.title() + "\nSubtitle:" + obj.subtitle())
                                                             }
